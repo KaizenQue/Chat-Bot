@@ -53,7 +53,7 @@ const CustomCaptcha = ({ onCaptchaChange }) => {
       window.speechSynthesis.cancel();
       setIsSpeaking(false);
     }
-    
+
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     let offsets = [];
@@ -76,7 +76,7 @@ const CustomCaptcha = ({ onCaptchaChange }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       generateCaptcha();
-    }, 60000); 
+    }, 60000);
 
     return () => {
       clearInterval(timer);
@@ -85,7 +85,7 @@ const CustomCaptcha = ({ onCaptchaChange }) => {
         window.speechSynthesis.cancel();
       }
     };
-  }, [isSpeaking]); 
+  }, [isSpeaking]);
 
   const speakCaptcha = () => {
     if ('speechSynthesis' in window) {
@@ -94,10 +94,10 @@ const CustomCaptcha = ({ onCaptchaChange }) => {
       setIsSpeaking(true);
 
       const voices = window.speechSynthesis.getVoices();
-      const maleUsVoice = voices.find(voice => 
-        voice.lang === 'en-US' && 
+      const maleUsVoice = voices.find(voice =>
+        voice.lang === 'en-US' &&
         voice.name.toLowerCase().includes('david')
-      ) || voices.find(voice => 
+      ) || voices.find(voice =>
         voice.lang === 'en-US'
       );
 
@@ -106,11 +106,11 @@ const CustomCaptcha = ({ onCaptchaChange }) => {
         if (currentIndex < captchaText.length) {
           const char = captchaText[currentIndex];
           const utterance = new SpeechSynthesisUtterance(char);
-          utterance.rate = 0.5; 
-          utterance.pitch = 0.9; 
-          utterance.volume = 1.0; 
+          utterance.rate = 0.5;
+          utterance.pitch = 0.9;
+          utterance.volume = 1.0;
           utterance.lang = 'en-US';
-          
+
           if (maleUsVoice) {
             utterance.voice = maleUsVoice;
           }
@@ -902,7 +902,7 @@ export default function ChatInterface() {
         {/* Chat Messages */}
         <div
           ref={chatContainerRef}
-          className="flex-1 overflow-y-auto space-y-4 mb-4 h-[calc(100vh-200px)]"
+          className="flex-1 overflow-y-auto space-y-4 mb-4 h-[calc(100vh-400px)]"
         >
           {/* Initial message */}
           {showTyping && !showInitialMessage && <TypingIndicator />}
@@ -910,7 +910,7 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Hi 👋</p>
+                <p>Hi, I’m Scarlet from Connect2Attorney</p>
               </div>
             </div>
           )}
@@ -922,12 +922,12 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>I'm from Connect2Attorney.</p>
+                <p>If you used Depo-Provera and experienced bone loss or fractures, you may qualify for compensation. </p>
               </div>
             </div>
           )}
 
-          {showTyping && showMessage1 && !showMessage2 && <TypingIndicator />}
+          {/* {showTyping && showMessage1 && !showMessage2 && <TypingIndicator />}
           {showMessage2 && (
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
@@ -938,14 +938,14 @@ export default function ChatInterface() {
                 </p>
               </div>
             </div>
-          )}
+          )} */}
 
           {showTyping && showMessage2 && !showMessage3 && <TypingIndicator />}
           {showMessage3 && (
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Want to check if you qualify for a settlement? 😃</p>
+                <p> Would you like to check if you're eligible for a legal claim</p>
                 {!showInitialResponse && (
                   <div className="flex gap-2 mt-2">
                     <Button
@@ -989,7 +989,7 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Ok, let me ask you one quick question...</p>
+                <p>Thanks. Just one quick question:</p>
               </div>
             </div>
           )}
@@ -1002,7 +1002,7 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>1️⃣ Have you been diagnosed with Mesothelioma?</p>
+                <p>Were you diagnosed with bone loss or did you suffer fractures after using Depo-Provera?</p>
                 {!showQualifiedIntro && !showNotQualified && (
                   <div className="flex gap-2 mt-2">
                     <Button
@@ -1037,7 +1037,7 @@ export default function ChatInterface() {
           )}
 
           {/* Qualified Response */}
-          {showTyping &&
+          {/* {showTyping &&
             showDiagnosisQuestion &&
             !showQualifiedIntro &&
             !showNotQualified && <TypingIndicator />}
@@ -1045,10 +1045,10 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>🎉 You're pre-qualified!</p>
+                <p>You're pre-qualified!</p>
               </div>
             </div>
-          )}
+          )} */}
 
           {showTyping &&
             showQualifiedIntro &&
@@ -1075,8 +1075,7 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  📞 Tap below to connect with a legal specialist for your free
-                  2-minute case review.
+                  📞  Tap below to speak with a legal expert for your free case review.
                 </p>
                 <Button
                   variant="contained"
@@ -1152,7 +1151,7 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Thanks for your response 🙏</p>
+                <p>Thanks for your response </p>
               </div>
             </div>
           )}
@@ -1165,35 +1164,13 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  We're currently helping only those who have been diagnosed
-                  with Mesothelioma.
+                  We’re currently assisting individuals who have suffered bone loss or fractures after using Depo-Provera.
                 </p>
               </div>
             </div>
           )}
 
-          {showTyping &&
-            showNotQualifiedMessage1 &&
-            !showNotQualifiedMessage2 && <TypingIndicator />}
-          {showNotQualifiedMessage2 && (
-            <div className="flex items-start gap-2">
-              <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
-                <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>
-                  If you or someone you love ever faces a Mesothelioma
-                  diagnosis, we're here to help. Visit us on{" "}
-                  <a
-                    href="https://fightformesothelioma.com/"
-                    className="text-blue-400 hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    https://fightformesothelioma.com/
-                  </a>
-                </p>
-              </div>
-            </div>
-          )}
+          
 
           {showTyping &&
             showNotQualifiedMessage2 &&
@@ -1202,7 +1179,26 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Wishing you the best of health!</p>
+                <p>
+                  Not eligible right now? No problem. If anything changes or you need help with another case, we’re always just a click away
+
+                </p>
+                <a
+                  href="https://connect2attorney.com"
+                  className="text-blue-400 hover:underline text-[15px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://connect2attorney.com
+                </a><br></br>
+                <a
+                  href="enquiry@connect2attorney.com"
+                  className="text-blue-400 hover:underline text-[15px]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  enquiry@connect2attorney.com
+                </a>
               </div>
             </div>
           )}
@@ -1225,8 +1221,9 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  If you or someone you love ever faces a Mesothelioma
-                  diagnosis, we're here to help. Visit us on{" "}
+                  If you or someone you know experiences issues related to Depo-Provera, we’re here to help.
+                  <br></br> You can reach us anytime at:
+
                   <a
                     href="https://fightformesothelioma.com/"
                     className="text-blue-400 hover:underline"
@@ -1234,23 +1231,31 @@ export default function ChatInterface() {
                     rel="noopener noreferrer"
                   >
                     https://fightformesothelioma.com/
+                  </a><br></br>
+                  <a
+                    href="enquiry@connect2attorney.com"
+                    className="text-blue-400 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    enquiry@connect2attorney.com
                   </a>
                 </p>
               </div>
             </div>
           )}
 
-          {showTyping && showDeclinedMessage1 && !showDeclinedMessage2 && (
+          {/* {showTyping && showDeclinedMessage1 && !showDeclinedMessage2 && (
             <TypingIndicator />
           )}
           {showDeclinedMessage2 && (
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Take care and stay well! 💙</p>
+                <p>Take care and stay well!</p>
               </div>
             </div>
-          )}
+          )} */}
 
           {/* Add this at the bottom of the messages */}
           <div ref={bottomRef} />

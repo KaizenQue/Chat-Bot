@@ -945,8 +945,7 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  🏛️ Over $30 billion has been set aside in asbestos trust funds
-                  for Mesothelioma victims.
+                If you or a loved one had a Bard PowerPort implanted and experienced complications like device fracture or infection, you may qualify for legal compensation. 
                 </p>
               </div>
             </div>
@@ -957,7 +956,7 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Want to check if you qualify for a settlement? 😃</p>
+                <p> Would you like to check if you’re eligible?</p>
                 {!showInitialResponse && (
                   <div className="flex gap-2 mt-2">
                     <Button
@@ -1001,7 +1000,7 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Ok, let me ask you one quick question...</p>
+                <p>Thanks. Just one quick question: </p>
               </div>
             </div>
           )}
@@ -1014,7 +1013,8 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>1️⃣ Have you been diagnosed with Mesothelioma?</p>
+                <p> Did you experience a fracture, bloodstream infection, or other complications from a Bard PowerPort implant? 
+</p>
                 {!showQualifiedIntro && !showNotQualified && (
                   <div className="flex gap-2 mt-2">
                     <Button
@@ -1049,7 +1049,7 @@ export default function ChatInterface() {
           )}
 
           {/* Qualified Response */}
-          {showTyping &&
+          {/* {showTyping &&
             showDiagnosisQuestion &&
             !showQualifiedIntro &&
             !showNotQualified && <TypingIndicator />}
@@ -1060,7 +1060,7 @@ export default function ChatInterface() {
                 <p>🎉 You're pre-qualified!</p>
               </div>
             </div>
-          )}
+          )} */}
 
           {showTyping &&
             showQualifiedIntro &&
@@ -1071,8 +1071,7 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  You may be entitled to compensation for medical bills, lost
-                  income, and more with no upfront costs.
+                  You may be entitled to compensation for medical treatment, pain, and long-term harm — with no upfront legal fees. 
                 </p>
               </div>
             </div>
@@ -1087,8 +1086,8 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  📞 Tap below to connect with a legal specialist for your free
-                  2-minute case review.
+                  📞  Tap below to speak with a legal expert for your free case review.
+                  
                 </p>
                 <Button
                   variant="contained"
@@ -1164,7 +1163,7 @@ export default function ChatInterface() {
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Thanks for your response 🙏</p>
+                <p>Thanks for your response</p>
               </div>
             </div>
           )}
@@ -1177,8 +1176,7 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  We're currently helping only those who have been diagnosed
-                  with Mesothelioma.
+                 We’re currently assisting individuals who suffered injuries due to Bard PowerPort failures.
                 </p>
               </div>
             </div>
@@ -1192,22 +1190,30 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  If you or someone you love ever faces a Mesothelioma
-                  diagnosis, we're here to help. Visit us on{" "}
+                  Not eligible right now? No problem. If anything changes or you need help with another case, we’re always just a click away: 
+<br></br>
                   <a
-                    href="https://fightformesothelioma.com/"
+                    href="enquiry@connect2attorney.com"
                     className="text-blue-400 hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    https://fightformesothelioma.com/
+                     enquiry@connect2attorney.com
+                  </a>
+                  <a
+                    href=" https://connect2attorney.com/"
+                    className="text-blue-400 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://connect2attorney.com/
                   </a>
                 </p>
               </div>
             </div>
           )}
 
-          {showTyping &&
+          {/* {showTyping &&
             showNotQualifiedMessage2 &&
             !showNotQualifiedMessage3 && <TypingIndicator />}
           {showNotQualifiedMessage3 && (
@@ -1217,14 +1223,14 @@ export default function ChatInterface() {
                 <p>Wishing you the best of health!</p>
               </div>
             </div>
-          )}
+          )} */}
 
           {/* Declined Response */}
           {showDeclined && (
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Totally understand 👍</p>
+                <p>Totally understand </p>
               </div>
             </div>
           )}
@@ -1237,32 +1243,39 @@ export default function ChatInterface() {
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
                 <p>
-                  If you or someone you love ever faces a Mesothelioma
-                  diagnosis, we're here to help. Visit us on{" "}
+                   If you or someone you know had complications from a Bard PowerPort, we’re here to help: <br></br>
                   <a
-                    href="https://fightformesothelioma.com/"
+                    href="enquiry@connect2attorney.com"
                     className="text-blue-400 hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    https://fightformesothelioma.com/
+                     enquiry@connect2attorney.com
+                  </a> <br></br>
+                  <a
+                    href="https://connect2attorney.com/"
+                    className="text-blue-400 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://connect2attorney.com/
                   </a>
                 </p>
               </div>
             </div>
           )}
 
-          {showTyping && showDeclinedMessage1 && !showDeclinedMessage2 && (
+          {/* {showTyping && showDeclinedMessage1 && !showDeclinedMessage2 && (
             <TypingIndicator />
           )}
           {showDeclinedMessage2 && (
             <div className="flex items-start gap-2">
               <div className="bg-gray-700/80 text-white py-2 px-3 rounded-lg rounded-tl-none max-w-[80%]">
                 <div className="text-xs text-gray-300 mb-1">Scarlett</div>
-                <p>Take care and stay well! 💙</p>
+                <p>Take care and stay well!</p>
               </div>
             </div>
-          )}
+          )} */}
 
           {/* Add this at the bottom of the messages */}
           <div ref={bottomRef} />

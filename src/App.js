@@ -7,17 +7,18 @@ import ChatInterface from "./ChatPage/ChatInterface"
 import ChatInterface2 from './ChatPage/ChatInterface2.jsx';
 import ChatInterface3 from './ChatPage/ChatInterface3.jsx';
 import ChatInterface4 from './ChatPage/ChatInterface4.jsx';
+import  HomePage  from './Components/Home-Page/components/HomePage';
 
 function App() {
 
   const router = createBrowserRouter([
     {
-      path: '/',
-      element: <ChatInterface />,
+      path: '/ChatInterface2',
+      element: <ChatInterface2 />,
     },
     {
-      path: '/mesothelioma-cb2',
-      element: <ChatInterface2 />,
+      path: '/ChatInterface',
+      element: <ChatInterface />,
     },
     {
       path: '/mesothelioma-cb3',
@@ -26,6 +27,10 @@ function App() {
     {
       path: '/mesothelioma-cb4',
       element: <ChatInterface4 />,
+    },
+    {
+      path: '/',
+      element: <HomePage />,
     },
   ]);
 
